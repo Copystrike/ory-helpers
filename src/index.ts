@@ -11,6 +11,7 @@ import { updateFlow } from './helpers/updateFlow';
 import { useOryFlow } from './hooks/useOryFlow';
 import { getLayout } from './layout/getLayout';
 import { withPageContext } from './layout/withPageContext';
+import { oryClient, oryMiddlewareClient } from './oryClient';
 
 export {
   OrySessionProvider,
@@ -24,4 +25,6 @@ export {
   getLayout,
   withPageContext,
   useOryFlow,
+  oryClient,
+  oryMiddlewareClient,
 };
