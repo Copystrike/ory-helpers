@@ -16,7 +16,6 @@ import { selectBrowserFlow } from '../helpers/selectBrowserFlow';
 import { updateBodyFlowPropertyName } from '../helpers/updateBodyFlowPropertyName';
 import { updateFlow } from '../helpers/updateFlow';
 import { useSession } from '../components/OrySessionProvider';
-import { FrontendApi, Session } from '@ory/client';
 
 type AuthFlow = LoginFlow | RegistrationFlow | VerificationFlow | RecoveryFlow;
 
@@ -144,7 +143,7 @@ export const useOryFlow: OryFlowHook = (flowType, redirects, options) => {
           router.push(redirects.loginSuccess);
           return;
         }
-        // @ts-ignore
+        // @ts-ignore someting is wrong with the types
         setFlow(data);
       })
       .catch(handleError);

@@ -1,4 +1,4 @@
-import { NextRouter } from "next/router";
+import { NextRouter } from 'next/router';
 
 /**
  * Sets the flow id in the URI query string.

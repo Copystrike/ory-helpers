@@ -20,7 +20,7 @@ export const handleUnprocessableEntity = async (
 
   if (currentUrl.host !== redirect.host) {
     console.warn("sdkError 422: Host changed redirect");
-    window.location.href = redirectBrowserTo;
+    Router.push(redirectBrowserTo);
     return;
   }
 

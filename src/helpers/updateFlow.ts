@@ -21,23 +21,18 @@ export const updateFlow = async (
 ) => {
   switch (flowType) {
     case 'login':
-      console.log('login update flow');
-      // @ts-ignore
+      // @ts-expect-error something wrong with the types, but it works
       return oryClient.updateLoginFlow(requestedParameters, options);
     case 'registration':
-      console.log('registration update flow');
-      // @ts-ignore
+      // @ts-expect-error something wrong with the types, but it works
       return oryClient.updateRegistrationFlow(requestedParameters, options);
     case 'verification':
-      console.log('verification update flow');
-      // @ts-ignore
+      // @ts-expect-error something wrong with the types, but it works
       return oryClient.updateVerificationFlow(requestedParameters, options);
     case 'recovery':
-      console.log('recovery update flow');
-      // @ts-ignore
+      // @ts-expect-error something wrong with the types, but it works
       return oryClient.updateRecoveryFlow(requestedParameters, options);
     default:
-      console.log('default update flow');
       throw new Error('Invalid flow type');
   }
 };

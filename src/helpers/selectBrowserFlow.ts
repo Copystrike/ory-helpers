@@ -21,28 +21,20 @@ export const selectBrowserFlow = async (
 ) => {
   switch (flowType) {
     case 'login':
-      console.log('login browser flow');
       return oryClient.createBrowserLoginFlow(requestedParameters, options);
     case 'registration':
-      console.log('registration browser flow');
       return oryClient.createBrowserRegistrationFlow(
         requestedParameters,
         options
       );
     case 'verification':
-      console.log('verification browser flow');
       return oryClient.createBrowserVerificationFlow(
         requestedParameters,
         options
       );
     case 'recovery':
-      console.log('recovery browser flow');
-      return oryClient.createBrowserRecoveryFlow(
-        requestedParameters,
-        options
-      );
+      return oryClient.createBrowserRecoveryFlow(requestedParameters, options);
     default:
-      console.log('default browser flow');
       throw new Error('Invalid flow type');
   }
 };
